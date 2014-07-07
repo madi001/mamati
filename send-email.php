@@ -1,11 +1,12 @@
 <?php
     if($_POST){
-        $to = 'hamad@mamati.com'; /*Put Your Email Address Here*/
+        $to = 'info@mamati.com'; /*Put Your Email Address Here*/
         $subject = "You have been contacted from Mobile Website.";
         $from_name = $_POST['contactName'];
         $from_email = $_POST['contactEmail'];
-        $from_phone = $_POST['contactPhone'];
-        $message = "<b> Name: " . $from_name . "<br/> Email: " . $from_email . " <br/> Phone: " .  $from_phone . "<br/></b><br/>----------------------------------------------- <br/><br/> " . $_POST['contactMessage'];
+        $from_country = $_POST['contactCountry'];
+		$from_phone = $_POST['contactPhone'];
+        $message = "<b> Name: " . $from_name . "<br/> Email: " . $from_email . "<br/> Country: ".$from_country." <br/> Phone: " .  $from_phone . "<br/></b><br/>----------------------------------------------- <br/><br/> " . $_POST['contactMessage'];
         
         $header = "From: $from_name <$from_email-->";
         mail($to, $subject, $message, $header);

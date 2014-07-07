@@ -86,7 +86,7 @@
 		  $('.portfolioProjects a.thumb:not(.photoswiped)').addClass('photoswiped').photoSwipe(options);
                   
                   $('#pagePortfolio .tab').hide();
-                  $('#pagePortfolio .tabsPortfolio li:nth-child(2) a').trigger('click');
+                  $('#pagePortfolio .tabsPortfolio li:nth-child(1) a').trigger('click');
                   
                }
                

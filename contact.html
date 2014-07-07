@@ -104,7 +104,7 @@
                     </a>
                 </li>
                 <li>            
-                    <a href="portfolio.html" id="linkPortfolio" class="pageLink pageLink-1-1 ">
+                    <a href="chooser.html" id="linkPortfolio" class="pageLink pageLink-1-1 ">
                       <div class="iconBox">
                         <img src="img/home/icon-portfolio.jpg" alt="Portfolio">
                       </div>
@@ -134,7 +134,7 @@
                     </a>
                 </li>
                 <li>            
-                    <a href="page1.html" id="linkExtra1" class="pageLink pageLink-1-1" >
+                    <a href="apps.html" id="linkExtra1" class="pageLink pageLink-1-1" >
                       <div class="iconBox">
                         <img src="img/icon-yellow.png" alt="Sample Page 1">
                       </div>
@@ -150,8 +150,7 @@
       <div id="header">
         <a href="index.html" class="homeButton" data-direction="reverse"></a>
         <a href="#" class="menuButton"></a>
-        <h1> Contact</h1>
-        <h2> Mamati, Ladies and Kids Fashion Brand</h2>
+        <h1><img src="img/home/mamati.png" alt="mamati logo" style="margin-right:10px;">Contact</h1>
         <!--<a href="page1.html" class="nextButton">&raquo;</a>-->
         <!--
         <a href="index.html">
@@ -192,9 +191,10 @@
             <div id="pivotTabs" class="pivotTabs">
               <div id="scroller">
                 <ul id="thelist">
-                  <li> <a href="#" data-value="#contactTab"> Contact us</a> </li>
-                  <li> <a href="#" data-value="#socialTab"> Getting social</a> </li>
-                  <li> <a href="#" data-value="#mapTab"> View our location</a> </li>
+                  <li> <a href="#" data-value="#contactTab">Contact us</a> </li>
+				  <li> <a href="#" data-value="#careersTab">Careers</a></li>
+                  <li> <a href="#" data-value="#socialTab">Getting social</a> </li>
+                  <li> <a href="#" data-value="#mapTab">View our locations</a> </li>
                   <li> <a href="#" class="goToFirst">&laquo;</a> </li>
                 </ul>
               </div>
@@ -206,8 +206,11 @@
               <h5 class="sectionTitle"> Our Address</h5>              
               <div class="groupBox ">
                 <ul>
-                  <li>
-                    <p class="value">
+                  <li><br />
+					<p class="value">
+						<h2>Toll Free : 800 MAMATI (626284)</h2><br /><br />
+					</p>
+					<p class="value">
 						<h1>ABU DHABI - UAE</h1><br /><br />
 					</p>
 					<p class="value">
@@ -237,7 +240,7 @@
                 </ul>
               </div>
               
-              <h5 class="sectionTitle"> We would love to listen from you.</h5>
+              <h5 class="sectionTitle"> Contact Us</h5>
               
               
               
@@ -259,6 +262,9 @@
                     <li>
                         <input type="email" placeholder="Email" required name="contactEmail" id="contactEmail">
                     </li>
+					<li>
+                        <input type="text" placeholder="Country" name="contactCountry" id="contactCountry">
+                    </li>
                     <li>
                         <input type="tel" placeholder="Phone" name="contactPhone" id="contactPhone">
                     </li>
@@ -277,7 +283,48 @@
             <!--end tab-->
                     
                     
-                    
+            <div id="careersTab" class="pivotTab" >
+              <h5 class="sectionTitle">We are hiring now</h5>
+               <div class="ui-widget successMessage">
+                  <div class="ui-state-highlight ui-corner-all">
+                    <p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .3em;"></span>
+                    <strong>Success!</strong> Your mail has been sent.</p>
+                  </div>
+                </div>
+               
+              
+              <form action="career-email.php" method="POST" data-enhance="false" enctype="multipart/form-data">
+                <div class="groupBox">
+                  
+                  <ul>
+                    <li>
+                        <input type="text" placeholder="Name" required name="contactName" id="contactName">
+                    </li>
+                    <li>
+                        <input type="email" placeholder="Email" required name="contactEmail" id="contactEmail">
+                    </li>
+					<li>
+                        <input type="text" placeholder="Country" name="contactCountry" id="contactCountry">
+                    </li>
+                    <li>
+                        <input type="tel" placeholder="Phone" name="contactPhone" id="contactPhone">
+                    </li>
+					<li>
+						<input id="files-upload" type="file" multiple>
+					</li>
+                    <li>
+                        <textarea placeholder="Cover Letter" required name="contactMessage" id="contactMessage"></textarea>
+                    </li>
+                  </ul>
+                  
+                  <input type="submit" class="button buttonStrong right" value="Send" name="buttonSubmit" value="submit">
+                  <div class="clearfix"></div>
+                  
+                </div>
+                <!-- end group box -->
+              </form>
+            </div>
+            <!--end tab-->        
                     
             
             <div id="mapTab" class="pivotTab" >
